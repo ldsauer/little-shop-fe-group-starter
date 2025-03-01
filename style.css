@@ -65,6 +65,15 @@ nav > button {
 
 /* MAIN */
 
+
+#items-view {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* align-content: center; */
+  justify-content: space-evenly;
+  align-items: ;
+}
  {
 
 }
@@ -82,15 +91,19 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: lightgray;
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
+  border: outset;
 }
 
 .item {
   width: 30%;
   flex-direction: column;
   justify-content: center;
+  background-color: aquamarine;
+  border: outset;
+  border-radius: 5%;
+  border-color: deeppink;
 }
 
 .merchant {
