@@ -32,6 +32,9 @@ submitMerchantButton.addEventListener('click', (event) => {
   submitMerchant(event)
 })
 
+// Add event listener for sorting
+sortButton.addEventListener('click', sortMerchantsHandler);
+
 //Global variables
 let merchants;
 let items;
@@ -263,4 +266,17 @@ function findMerchant(id) {
     return parseInt(merchant.id) === parseInt(id)
   })
   return foundMerchant
+}
+
+// New sorting handler function
+function sortMerchantsHandler() {
+  // Sort the existing merchants array alphabetically by name
+  const sorted = sortMerchantsAlphabetical(merchants);
+  // displayMerchants expects an array, so pass sorted accordingly
+  displayMerchants(sorted);
+}
+
+// Helper function to sort merchants alphabetically
+function sortMerchantsAlphabetical(merchantsArray) {
+  return merchantsArray.slice().sort((a, b) => a.attributes.name.localeCompare(b.attributes.name));
 }
