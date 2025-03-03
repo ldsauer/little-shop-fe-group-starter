@@ -1,7 +1,7 @@
 /* GENERAL */
 
 * {
-  font-family: sans-serif;
+  font-family: 'Atlassian Sans';
 }
 
 body, html {
@@ -59,10 +59,20 @@ nav > button {
   padding: 20px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #merchants-nav:hover,
 #items-nav:hover {
   animation: bubble 0.4s ease-in-out
 }
+
+#items-nav:hover{
+  background-color: red;
+}
+
 @keyframes bubble {
   0% {
     transform: scale(1);
@@ -75,7 +85,6 @@ nav > button {
   }
 }
 
-
 .active-nav {
   background-color: white;
 }
@@ -87,11 +96,10 @@ nav > button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* align-content: center; */
+  align-content: center;
   justify-content: space-evenly;
   align-items: stretch;
-}
- {
+  background-color: black;
 
 }
 
@@ -114,13 +122,15 @@ form {
 }
 
 .item {
-  width: 30%;
+  width: 300px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
-  background-color: aquamarine;
+  background-color: grey;
   border: outset;
   border-radius: 5%;
-  border-color: deeppink;
+  border-color: red;
+  align-items: center;
 }
 
 .merchant {
