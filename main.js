@@ -31,12 +31,6 @@ submitMerchantButton.addEventListener('click', (event) => {
   submitMerchant(event)
 })
 
-document.getElementById('sort-button').addEventListener('click', function() {
-  fetch('/api/v1/merchants/sorted')
-    .then(response => response.json())
-    .then(data => displayMerchants(data));
-})
-
 //Global variables
 let merchants;
 let items;
@@ -175,13 +169,9 @@ function displayItems(items) {
   })
 }
 
-// The displayMerchants function was altered to accommodate the new sorted data response 
-// and to ensure the merchants container is properly refreshed. 
-// In its updated form, it clears the existing content and iterates over data.data (the sorted list from the API) to render the merchants. 
-// This prevents duplicated or stale listings when the sort button is clicked.
-function displayMerchants(data) {
+function displayMerchants(merchants) {
     merchantsView.innerHTML = ''
-    data.data.forEach(merchant => {
+    merchants.forEach(merchant => {
         merchantsView.innerHTML += 
         `<article class="merchant" id="merchant-${merchant.id}">
           <h3 class="merchant-name">${merchant.attributes.name}</h3>
