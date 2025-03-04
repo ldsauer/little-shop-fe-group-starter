@@ -9,8 +9,8 @@ const merchantsNavButton = document.querySelector("#merchants-nav")
 const itemsNavButton = document.querySelector("#items-nav")
 const addNewButton = document.querySelector("#add-new-button")
 const showingText = document.querySelector("#showing-text")
-const sortButton = document.getElementById('sort-button')
-
+const singleMerchantView = document.querySelector("#single-merchant-view")
+const sortButton = document.querySelector("#sort-button")
 //Form elements
 const merchantForm = document.querySelector("#new-merchant-form")
 const newMerchantName = document.querySelector("#new-merchant-name")
@@ -64,6 +64,7 @@ function handleMerchantClicks(event) {
     discardMerchantEdits(event)
   }
 }
+
 
 function deleteMerchant(event) {
   const id = event.target.closest("article").id.split('-')[1]
@@ -148,7 +149,7 @@ function showItemsView() {
 
 function showMerchantItemsView(id, items) {
   showingText.innerText = `All Items for Merchant #${id}`
-  show([itemsView])
+  show([singleMerchantView])
   hide([merchantsView, addNewButton])
   addRemoveActiveNav(itemsNavButton, merchantsNavButton)
   addNewButton.dataset.state = 'item'
