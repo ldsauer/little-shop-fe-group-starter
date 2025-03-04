@@ -48,6 +48,7 @@ header {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(255, 247, 0);
   padding: 15px;
+  
   border-radius: 22px;
   height: 150px;
   width: 300px;
@@ -67,6 +68,8 @@ header {
 100% {
     background-position: 0% 50%;
 }
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -84,6 +87,13 @@ nav {
   align-items: end;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 50px 1% 0px 0px;
+  z-index: 2;
+}
+
 nav > button {
   border: none;
   margin-bottom: 20px;
@@ -92,7 +102,13 @@ nav > button {
   text-align: center;
   border-radius: 22px 0px 0px 22px;
   padding: 20px;
+  z-index: 2;
 }
+
+.active-nav {
+  background-color: white;
+}
+/* this is the tab/button that is currently active */
 
 #merchants-nav:hover,
 #items-nav:hover {
@@ -113,25 +129,126 @@ nav > button {
   }
 }
 
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.sidebar_background {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #4CB8B6;
+  overflow: hidden;
+  z-index: 1;
+}
 
 .active-nav {
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  
+.ball {
+  position: absolute;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  animation: move linear infinite;
+}
+
+.ball:nth-child(odd) {
+  color: yellow;
+  background-image: url("https://media.glassdoor.com/sqll/1346816/turing-school-of-software-and-design-squarelogo-1505397143889.png");
+}
+
+.ball:nth-child(even) {
+  color: pink;
+  background-image: url("https://media.glassdoor.com/sqll/1346816/turing-school-of-software-and-design-squarelogo-1505397143889.png");
+}
+
+/* Using a custom attribute for variability */
+.ball:nth-child(1) {
+  top: 77%;
+  left: 88%;
+  animation-duration: 40s;
+  animation-delay: -3s;
+  transform-origin: 16vw -2vh;
+  box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
+}
+.ball:nth-child(2) {
+  top: 42%;
+  left: 2%;
+  animation-duration: 53s;
+  animation-delay: -29s;
+  transform-origin: -19vw 21vh;
+  box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
+}
+.ball:nth-child(3) {
+  top: 28%;
+  left: 18%;
+  animation-duration: 49s;
+  animation-delay: -8s;
+  transform-origin: -22vw 3vh;
+  box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
+}
+.ball:nth-child(4) {
+  top: 50%;
+  left: 79%;
+  animation-duration: 26s;
+  animation-delay: -21s;
+  transform-origin: -17vw -6vh;
+  box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
+}
+.ball:nth-child(5) {
+  top: 46%;
+  left: 15%;
+  animation-duration: 36s;
+  animation-delay: -40s;
+  transform-origin: 4vw 0vh;
+  box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
+}
+.ball:nth-child(6) {
+  top: 77%;
+  left: 16%;
+  animation-duration: 31s;
+  animation-delay: -10s;
+  transform-origin: 18vw 4vh;
+  box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
+}
+.ball:nth-child(7) {
+  top: 22%;
+  left: 17%;
+  animation-duration: 55s;
+  animation-delay: -6s;
+  transform-origin: 1vw -23vh;
+  box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
+}
+.ball:nth-child(8) {
+  top: 41%;
+  left: 47%;
+  animation-duration: 43s;
+  animation-delay: -28s;
+  transform-origin: 25vw -3vh;
+  box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
 }
 
 /* MAIN */
-
 
 .items-view {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-content: center;
   justify-content: space-evenly;
   align-items: stretch;
+  background-image: linear-gradient(to bottom left, rgb(223, 243, 248), rgb(52, 193, 215));
 }
 
 main {
-  padding: 10px;
+  padding: 0px;
   width: 75%;
   background-image: linear-gradient(to bottom left, rgb(223, 243, 248), rgb(52, 193, 215));
   box-shadow: inset 0 0 0 1px rgb(91, 84, 84);
@@ -150,14 +267,20 @@ form {
 }
 
 .item {
-  width: 30%;
+  width: 300px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
-  background-color: aquamarine;
   border: outset;
+  border-width: thick;
   border-radius: 5%;
-  border-color: deeppink;
+  border-color: rgba(71, 31, 228, 0.462);
+  background-color: rgb(201, 237, 227);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  align-items: center;
 }
+/* background-image: linear-gradient(to bottom left, rgb(119, 118, 118), rgb(255, 255, 255));
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
 
 .merchant {
   width: 98%;
@@ -201,6 +324,7 @@ form {
 .display-options {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .display-options > button {
@@ -218,6 +342,15 @@ form {
 
 .fail {
   color: red;
+}
+
+.snoop-container{
+  display:flex;
+  position:sticky;
+  justify-content: space-between;
+  bottom:0;
+  left:0;
+  z-index: 2;
 }
 
 /* HIDDEN ELEMENTS */
