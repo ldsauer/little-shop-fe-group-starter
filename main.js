@@ -1,6 +1,6 @@
+import { deleteData, editData, fetchData, postData } from './apiCalls'
+import { showStatus } from './errorHandling'
 import './style.css'
-import {fetchData, postData, deleteData, editData} from './apiCalls'
-import {showStatus} from './errorHandling'
 
 //Sections, buttons, text
 const itemsView = document.querySelector("#items-view")
@@ -268,15 +268,13 @@ function findMerchant(id) {
   return foundMerchant
 }
 
-// New sorting handler function
 function sortMerchantsHandler() {
-  // Sort the existing merchants array alphabetically by name
-  const sorted = sortMerchantsAlphabetical(merchants);
-  // displayMerchants expects an array, so pass sorted accordingly
-  displayMerchants(sorted);
-}
-
-// Helper function to sort merchants alphabetically
-function sortMerchantsAlphabetical(merchantsArray) {
-  return merchantsArray.slice().sort((a, b) => a.attributes.name.localeCompare(b.attributes.name));
+  Promise.all([fetchData('merchants/sorted')])
+.then(responses => {
+    merchants = responses[0].data
+    displayMerchants(merchants)
+  })
+  .catch(err => {
+    console.log('catch error: ', err)
+  })
 }
