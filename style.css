@@ -1,7 +1,7 @@
 /* GENERAL */
 
 * {
-  font-family: 'Atlassian Sans';
+  font-family: cursive;
 }
 
 body, html {
@@ -200,7 +200,7 @@ nav > button {
 
 /* MAIN */
 
-#items-view {
+.items-view {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -233,8 +233,8 @@ form {
   height: auto;
   flex-direction: column;
   justify-content: center;
-  background-color: grey;
   border: outset;
+  border-width: thick;
   border-radius: 5%;
   border-color: rgba(71, 31, 228, 0.462);
   background-color: rgb(201, 237, 227);
@@ -281,6 +281,15 @@ form {
 
 .fail {
   color: red;
+}
+
+.snoop-container{
+  display:flex;
+  position:sticky;
+  justify-content: space-between;
+  bottom:0;
+  left:0;
+  z-index: 2;
 }
 
 /* HIDDEN ELEMENTS */
