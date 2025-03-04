@@ -4,7 +4,8 @@
   font-family: cursive;
 }
 
-body, html {
+body,
+html {
   background-color: gray;
 }
 
@@ -40,7 +41,7 @@ h1 {
   font-size: 2.5em;
 }
 
-h1, 
+h1,
 h2 {
   margin: 0;
 }
@@ -79,17 +80,15 @@ nav > button {
   animation: bubble 0.4s ease-in-out
 }
 
-#items-nav:hover{
-  background-color: red;
-}
-
 @keyframes bubble {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
@@ -197,7 +196,6 @@ nav > button {
   box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
 }
 
-
 /* MAIN */
 
 .items-view {
@@ -296,4 +294,4 @@ form {
 
 .hidden {
   display: none;
-} 
+}

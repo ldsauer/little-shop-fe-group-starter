@@ -1,6 +1,6 @@
+import { deleteData, editData, fetchData, postData } from './apiCalls'
+import { showStatus } from './errorHandling'
 import './style.css'
-import {fetchData, postData, deleteData, editData} from './apiCalls'
-import {showStatus} from './errorHandling'
 
 //Sections, buttons, text
 const itemsView = document.querySelector("#items-view")
@@ -9,6 +9,7 @@ const merchantsNavButton = document.querySelector("#merchants-nav")
 const itemsNavButton = document.querySelector("#items-nav")
 const addNewButton = document.querySelector("#add-new-button")
 const showingText = document.querySelector("#showing-text")
+const sortButton = document.getElementById('sort-button')
 
 //Form elements
 const merchantForm = document.querySelector("#new-merchant-form")
@@ -30,6 +31,9 @@ addNewButton.addEventListener('click', () => {
 submitMerchantButton.addEventListener('click', (event) => {
   submitMerchant(event)
 })
+
+// Add event listener for sorting
+sortButton.addEventListener('click', sortMerchantsHandler);
 
 //Global variables
 let merchants;
@@ -128,7 +132,7 @@ function showMerchantsView() {
   showingText.innerText = "All Merchants"
   addRemoveActiveNav(merchantsNavButton, itemsNavButton)
   addNewButton.dataset.state = 'merchant'
-  show([merchantsView, addNewButton])
+  show([merchantsView, addNewButton, sortButton])
   hide([itemsView])
   displayMerchants(merchants)
 }
@@ -138,7 +142,7 @@ function showItemsView() {
   addRemoveActiveNav(itemsNavButton, merchantsNavButton)
   addNewButton.dataset.state = 'item'
   show([itemsView])
-  hide([merchantsView, merchantForm, addNewButton])
+  hide([merchantsView, merchantForm, addNewButton, sortButton])
   displayItems(items)
 }
 
@@ -235,24 +239,42 @@ function addRemoveActiveNav(nav1, nav2) {
 }
 
 function filterByMerchant(merchantId) {
-  const specificMerchantItems = []
+  // let specificMerchantItems = []
+  // for (let i = 0; i < items.length; i++) {
+  //   if (items[i].attributes.merchant_id === parseInt(merchantId)) {
+  //     specificMerchantItems.push(items[i])
+  //   }
+  // }
 
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].attributes.merchant_id === parseInt(merchantId)) {
-      specificMerchantItems.push(items[i])
-    }
-  }
-
+  let specificMerchantItems = items.filter((item)=>{
+    return item.attributes.merchant_id === parseInt(merchantId)
+  })
   return specificMerchantItems
 }
 
 function findMerchant(id) {
-  let foundMerchant;
+  // let foundMerchant;
 
-  for (let i = 0; i < merchants.length; i++) {
-    if (parseInt(merchants[i].id) === parseInt(id)) {
-      foundMerchant = merchants[i]
-      return foundMerchant
-    }
-  }
+  // for (let i = 0; i < merchants.length; i++) {
+  //   if (parseInt(merchants[i].id) === parseInt(id)) {
+  //     foundMerchant = merchants[i]
+  //     return foundMerchant
+  //   }
+  // }
+
+  let foundMerchant = merchants.find((merchant)=>{
+    return parseInt(merchant.id) === parseInt(id)
+  })
+  return foundMerchant
+}
+
+function sortMerchantsHandler() {
+  Promise.all([fetchData('merchants/sorted')])
+.then(responses => {
+    merchants = responses[0].data
+    displayMerchants(merchants)
+  })
+  .catch(err => {
+    console.log('catch error: ', err)
+  })
 }
