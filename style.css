@@ -26,7 +26,6 @@ html {
 body {
   display: flex;
   margin: 0px;
-
 }
 
 button:hover {
@@ -105,25 +104,21 @@ nav > button {
   z-index: 2;
 }
 
-.active-nav {
-  background-color: white;
-}
-/* this is the tab/button that is currently active */
-
 #merchants-nav:hover,
 #items-nav:hover {
   animation: bubble 0.4s ease-in-out
 }
 
+
 @keyframes bubble {
   0% {
     transform: scale(1);
   }
-
+  
   50% {
     transform: scale(1.2);
   }
-
+  
   100% {
     transform: scale(1);
   }
@@ -141,15 +136,23 @@ nav > button {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #4CB8B6;
   overflow: hidden;
   z-index: 1;
 }
 
+.merchants-nav,
+.items-nav{
+  color: white;
+  background-image: url("https://t3.ftcdn.net/jpg/07/74/41/74/360_F_774417426_ggwQpWi3DRlOa3mw65kk2oVZsi6bsXZ7.jpg");
+  z-index: 1;
+}
 .active-nav {
-  background-color: rgb(255, 255, 255);
+  background-image: url("https://t4.ftcdn.net/jpg/07/64/01/61/360_F_764016167_OGc1Ed93foMxb9EGPZgH7LmKfAs6HV21.jpg");
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-  
+  color: black;
+  z-index: 2;
+}
+
 .ball {
   position: absolute;
   width: 20vmin;
@@ -256,6 +259,7 @@ main {
 
 form {
   display: flex;
+  justify-content: center;
 }
 
 .item,
@@ -329,7 +333,6 @@ form {
 
 .display-options > button {
   margin-left: 15px;
-  
 }
 
 .merchant-name-in-item {
@@ -361,7 +364,7 @@ form {
 
   /* ############## */
 
-.circles{
+/* .circles{
   position: absolute;
   top: 0;
   left: 0;
@@ -477,9 +480,4 @@ form {
 
 }
 
-.snoop-container{
-  display:flex;
-  position:absolute;
-  bottom:0;
-  left:0;
-}
+ */
