@@ -13,19 +13,26 @@ html {
 
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
 body {
   display: flex;
   margin: 0px;
+}
+
+button {
+  background-image: linear-gradient(to bottom left, rgb(119, 118, 118), rgb(255, 255, 255));
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  
 }
 
 button:hover {
@@ -51,7 +58,7 @@ header {
   position: relative;
   z-index: 2;
   border-radius: 22px;
-  background: linear-gradient(to top right, #00000000, #ffffff77 50%, #00000000);
+  /* background: linear-gradient(to top right, #00000000, #ffffff77 50%, #00000000); */
   background-size: 300%;
   background-position-x: 100%;
   animation: shimmer 12s infinite ease;
@@ -261,6 +268,26 @@ form {
   border: outset;
 }
 
+.items-view {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-image: linear-gradient(to bottom left, rgb(223, 243, 248), rgb(52, 193, 215));
+}
+
+/* #merchants-view {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-image: linear-gradient(to bottom left, rgb(223, 243, 248), rgb(52, 193, 215));
+} */
+
 .item {
   width: 300px;
   height: auto;
@@ -338,7 +365,7 @@ box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
   color: red;
 }
 
-.snoop-container{
+.snoop-container {
   display:flex;
   position:sticky;
   justify-content: space-between;
@@ -347,15 +374,8 @@ box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
   z-index: 2;
 }
 
-.items-view {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-evenly;
-  align-items: stretch;
-  background-image: linear-gradient(to bottom left, rgb(223, 243, 248), rgb(52, 193, 215));
-}
+
+
 /* HIDDEN ELEMENTS */
 
 .hidden {

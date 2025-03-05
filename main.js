@@ -149,7 +149,7 @@ function showItemsView() {
 
 function showMerchantItemsView(id, items) {
   showingText.innerText = `All Items for Merchant #${id}`
-  show([singleMerchantView])
+  show([itemsView])
   hide([merchantsView, addNewButton])
   addRemoveActiveNav(itemsNavButton, merchantsNavButton)
   addNewButton.dataset.state = 'item'
