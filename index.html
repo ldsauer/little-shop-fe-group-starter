@@ -13,7 +13,7 @@
         <h2>Admin Portal</h2>
       </header>
       <nav>
-        <div class="area" >
+        <div class="area">
           <ul class="circles">
             <li></li>
             <li></li>
@@ -26,7 +26,7 @@
             <li></li>
             <li></li>
           </ul>
-        </div >
+        </div>
         <div class="sidebar_background">
           <span class="ball"></span>
           <span class="ball"></span>
@@ -42,14 +42,15 @@
           <h2>Items</h2>
         </button>
         <img src="assets/feed_me_seymore.png" alt="Feed Me">
-      </nav> 
+      </nav>
     </aside>
     <main>
       <section class="display-options">
         <h3>Showing: <span id="showing-text">All Merchants</span></h3>
         <button id="add-new-button" class="add-new-button"
           data-state="merchant">+ Add New</button>
-        <button id="sort-button">Sort</button>
+        <button id="sort-button">Sort A->Z</button>
+        <button id="reset-sort-button" class="hidden">Reset Sort</button>
       </section>
       <section id="add-new-options">
         <form id="new-merchant-form" class="hidden">
@@ -70,26 +71,28 @@
         </form>
       </section>
       <section id="merchants-view" class="view">
-          <!-- Data will be displayed here -->
-        </section>
-        <section id="items-view" class="view hidden items-view">
-          <!-- Data will be displayed here -->
-        </section>
-        <section id="single-merchant-view" class="view hidden">
-          <!-- Data will be displayed here -->
-        </section>
-        <footer>
-          <div class="snoop-container">
-            <div class= "snoop">
-              <img src="https://i.gifer.com/origin/0c/0c2924e66a08f3a42e9f08db5e8a49de_w200.gif">
-            </div>
-             <!-- <img src="assets/feed_me_seymore.png" alt="Feed Me"> -->
-            <div class= "snoop2">
-              <img src="https://i.gifer.com/origin/0c/0c2924e66a08f3a42e9f08db5e8a49de_w200.gif">
-            </div>
+        <!-- Data will be displayed here -->
+      </section>
+      <section id="items-view" class="view hidden items-view">
+        <!-- Data will be displayed here -->
+      </section>
+      <section id="single-merchant-view" class="view hidden">
+        <!-- Data will be displayed here -->
+      </section>
+      <footer>
+        <div class="snoop-container">
+          <div class="snoop">
+            <img
+              src="https://i.gifer.com/origin/0c/0c2924e66a08f3a42e9f08db5e8a49de_w200.gif">
           </div>
-        </footer>
-      </main>
+          <!-- <img src="assets/feed_me_seymore.png" alt="Feed Me"> -->
+          <div class="snoop2">
+            <img
+              src="https://i.gifer.com/origin/0c/0c2924e66a08f3a42e9f08db5e8a49de_w200.gif">
+          </div>
+        </div>
+      </footer>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

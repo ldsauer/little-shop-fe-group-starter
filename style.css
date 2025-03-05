@@ -13,13 +13,15 @@ html {
 
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
+
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -48,7 +50,7 @@ header {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(255, 247, 0);
   padding: 15px;
-  
+
   border-radius: 22px;
   height: 150px;
   width: 300px;
@@ -61,13 +63,16 @@ header {
 @keyframes shimmer {
   0% {
     background-position: 0% 50%;
-}
-50% {
+  }
+
+  50% {
     background-position: 100% 50%;
-}
-100% {
+  }
+
+  100% {
     background-position: 0% 50%;
-}
+  }
+
   position: relative;
   z-index: 2;
 }
@@ -108,6 +113,7 @@ nav > button {
 .active-nav {
   background-color: white;
 }
+
 /* this is the tab/button that is currently active */
 
 #merchants-nav:hover,
@@ -149,7 +155,8 @@ nav > button {
 .active-nav {
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-  
+}
+
 .ball {
   position: absolute;
   width: 20vmin;
@@ -178,6 +185,7 @@ nav > button {
   transform-origin: 16vw -2vh;
   box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
 }
+
 .ball:nth-child(2) {
   top: 42%;
   left: 2%;
@@ -186,6 +194,7 @@ nav > button {
   transform-origin: -19vw 21vh;
   box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
 }
+
 .ball:nth-child(3) {
   top: 28%;
   left: 18%;
@@ -194,6 +203,7 @@ nav > button {
   transform-origin: -22vw 3vh;
   box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
 }
+
 .ball:nth-child(4) {
   top: 50%;
   left: 79%;
@@ -202,6 +212,7 @@ nav > button {
   transform-origin: -17vw -6vh;
   box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
 }
+
 .ball:nth-child(5) {
   top: 46%;
   left: 15%;
@@ -210,6 +221,7 @@ nav > button {
   transform-origin: 4vw 0vh;
   box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
 }
+
 .ball:nth-child(6) {
   top: 77%;
   left: 16%;
@@ -218,6 +230,7 @@ nav > button {
   transform-origin: 18vw 4vh;
   box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
 }
+
 .ball:nth-child(7) {
   top: 22%;
   left: 17%;
@@ -226,6 +239,7 @@ nav > button {
   transform-origin: 1vw -23vh;
   box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
 }
+
 .ball:nth-child(8) {
   top: 41%;
   left: 47%;
@@ -279,6 +293,7 @@ form {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
   align-items: center;
 }
+
 /* background-image: linear-gradient(to bottom left, rgb(119, 118, 118), rgb(255, 255, 255));
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
 
@@ -329,7 +344,7 @@ form {
 
 .display-options > button {
   margin-left: 15px;
-  
+
 }
 
 .merchant-name-in-item {
@@ -344,12 +359,12 @@ form {
   color: red;
 }
 
-.snoop-container{
-  display:flex;
-  position:sticky;
+.snoop-container {
+  display: flex;
+  position: sticky;
   justify-content: space-between;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   z-index: 2;
 }
 
@@ -357,11 +372,11 @@ form {
 
 .hidden {
   display: none;
-} 
+}
 
-  /* ############## */
+/* ############## */
 
-.circles{
+.circles {
   position: absolute;
   top: 0;
   left: 0;
@@ -372,20 +387,20 @@ form {
   display: flex;
 }
 
-.circles li{
+.circles li {
   position: absolute;
   display: flex;
   list-style: none;
   width: 20px;
   height: 20px;
- background-image: url("https://media.glassdoor.com/sqll/1346816/turing-school-of-software-and-design-squarelogo-1505397143889.png");
- background-position: center;
- background-size: cover;
+  background-image: url("https://media.glassdoor.com/sqll/1346816/turing-school-of-software-and-design-squarelogo-1505397143889.png");
+  background-position: center;
+  background-size: cover;
   animation: animate 25s linear infinite;
   bottom: -150px;
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
@@ -393,7 +408,7 @@ form {
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
@@ -401,14 +416,14 @@ form {
   animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
   left: 70%;
   width: 20px;
   height: 20px;
   animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
   left: 40%;
   width: 60px;
   height: 60px;
@@ -416,28 +431,28 @@ form {
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
   left: 75%;
   width: 110px;
   height: 110px;
   animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
   left: 35%;
   width: 150px;
   height: 150px;
   animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
   left: 50%;
   width: 25px;
   height: 25px;
@@ -445,7 +460,7 @@ form {
   animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
   left: 20%;
   width: 15px;
   height: 15px;
@@ -453,7 +468,7 @@ form {
   animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
   left: 85%;
   width: 150px;
   height: 150px;
@@ -463,23 +478,23 @@ form {
 
 @keyframes animate {
 
-  0%{
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-      border-radius: 0;
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
   }
 
-  100%{
-      transform: translateY(-1000px) rotate(720deg);
-      opacity: 0;
-      border-radius: 50%;
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
 
 }
 
-.snoop-container{
-  display:flex;
-  position:absolute;
-  bottom:0;
-  left:0;
+.snoop-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
