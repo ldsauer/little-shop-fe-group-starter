@@ -15,9 +15,11 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -67,13 +69,16 @@ header {
 @keyframes shimmer {
   0% {
     background-position: 0% 50%;
-}
-50% {
+  }
+
+  50% {
     background-position: 100% 50%;
-}
-100% {
+  }
+
+  100% {
     background-position: 0% 50%;
-}
+  }
+
   position: relative;
   z-index: 2;
 }
@@ -115,7 +120,6 @@ nav > button {
 #items-nav:hover {
   animation: bubble 0.4s ease-in-out
 }
-
 
 @keyframes bubble {
   0% {
@@ -188,6 +192,7 @@ nav > button {
   transform-origin: 16vw -2vh;
   box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
 }
+
 .ball:nth-child(2) {
   top: 42%;
   left: 2%;
@@ -196,6 +201,7 @@ nav > button {
   transform-origin: -19vw 21vh;
   box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
 }
+
 .ball:nth-child(3) {
   top: 28%;
   left: 18%;
@@ -204,6 +210,7 @@ nav > button {
   transform-origin: -22vw 3vh;
   box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
 }
+
 .ball:nth-child(4) {
   top: 50%;
   left: 79%;
@@ -212,6 +219,7 @@ nav > button {
   transform-origin: -17vw -6vh;
   box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
 }
+
 .ball:nth-child(5) {
   top: 46%;
   left: 15%;
@@ -220,6 +228,7 @@ nav > button {
   transform-origin: 4vw 0vh;
   box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
 }
+
 .ball:nth-child(6) {
   top: 77%;
   left: 16%;
@@ -228,6 +237,7 @@ nav > button {
   transform-origin: 18vw 4vh;
   box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
 }
+
 .ball:nth-child(7) {
   top: 22%;
   left: 17%;
@@ -236,6 +246,7 @@ nav > button {
   transform-origin: 1vw -23vh;
   box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
 }
+
 .ball:nth-child(8) {
   top: 41%;
   left: 47%;
@@ -337,11 +348,11 @@ form {
 }
 
 .snoop-container {
-  display:flex;
-  position:sticky;
+  display: flex;
+  position: sticky;
   justify-content: space-between;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   z-index: 2;
 }
 
