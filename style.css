@@ -78,9 +78,6 @@ header {
   100% {
     background-position: 0% 50%;
   }
-
-  position: relative;
-  z-index: 2;
 }
 
 h1 {
